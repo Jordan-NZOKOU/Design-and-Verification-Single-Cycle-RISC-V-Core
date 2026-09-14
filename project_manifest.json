@@ -1,0 +1,154 @@
+{
+  "copyright": "Copyright 2026 Jordan Nzokou and Doeg Tiozang\nProject: Nexvantis\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.",
+  "project": "Nexvantis",
+  "version": "6.0.0",
+  "projects": {
+    "01_mux": {
+      "sources": [
+        "Mux.v",
+        "Mux_tb.v"
+      ],
+      "top": "Mux_tb",
+      "vcd": "mux.vcd",
+      "title": "Parameterized 2:1 Multiplexer"
+    },
+    "02_pc_and_adders": {
+      "sources": [
+        "PC.v",
+        "PC_Adder.v",
+        "PC_tb.v"
+      ],
+      "top": "PC_tb",
+      "vcd": "pc.vcd",
+      "title": "Program Counter and Address Adders"
+    },
+    "03_alu": {
+      "sources": [
+        "ALU.v",
+        "ALU_tb.v"
+      ],
+      "top": "ALU_tb",
+      "vcd": "alu.vcd",
+      "title": "32-bit Arithmetic and Logic Unit"
+    },
+    "04_register_file": {
+      "sources": [
+        "Register_File.v",
+        "Register_File_tb.v"
+      ],
+      "top": "Register_File_tb",
+      "vcd": "register_file.vcd",
+      "title": "RV32I Register File"
+    },
+    "05_immediate_extension": {
+      "sources": [
+        "Sign_Extend.v",
+        "Sign_Extend_tb.v"
+      ],
+      "top": "Sign_Extend_tb",
+      "vcd": "sign_extend.vcd",
+      "title": "Immediate Reconstruction and Sign Extension"
+    },
+    "06_memories": {
+      "sources": [
+        "Instruction_Memory.v",
+        "Data_Memory.v",
+        "Memories_tb.v"
+      ],
+      "top": "Memories_tb",
+      "vcd": "memories.vcd",
+      "title": "Instruction and Data Memories"
+    },
+    "07_control_unit": {
+      "sources": [
+        "Main_Decoder.v",
+        "ALU_Decoder.v",
+        "Control_Unit_Top.v",
+        "Control_Unit_Top_tb.v"
+      ],
+      "top": "Control_Unit_Top_tb",
+      "vcd": "control_unit.vcd",
+      "title": "Main and ALU Control Decoders"
+    },
+    "08_alu_register_integration": {
+      "sources": [
+        "Mux.v",
+        "PC.v",
+        "PC_Adder.v",
+        "ALU.v",
+        "Register_File.v",
+        "Sign_Extend.v",
+        "Instruction_Memory.v",
+        "Data_Memory.v",
+        "Main_Decoder.v",
+        "ALU_Decoder.v",
+        "Control_Unit_Top.v",
+        "Single_Cycle_Top.v",
+        "Integration_ALU_tb.v"
+      ],
+      "top": "Integration_ALU_tb",
+      "vcd": "integration_alu.vcd",
+      "title": "ALU and Register Datapath Integration"
+    },
+    "09_load_store_integration": {
+      "sources": [
+        "Mux.v",
+        "PC.v",
+        "PC_Adder.v",
+        "ALU.v",
+        "Register_File.v",
+        "Sign_Extend.v",
+        "Instruction_Memory.v",
+        "Data_Memory.v",
+        "Main_Decoder.v",
+        "ALU_Decoder.v",
+        "Control_Unit_Top.v",
+        "Single_Cycle_Top.v",
+        "Integration_Load_Store_tb.v"
+      ],
+      "top": "Integration_Load_Store_tb",
+      "vcd": "integration_load_store.vcd",
+      "title": "Load/Store Datapath Integration"
+    },
+    "10_branch_integration": {
+      "sources": [
+        "Mux.v",
+        "PC.v",
+        "PC_Adder.v",
+        "ALU.v",
+        "Register_File.v",
+        "Sign_Extend.v",
+        "Instruction_Memory.v",
+        "Data_Memory.v",
+        "Main_Decoder.v",
+        "ALU_Decoder.v",
+        "Control_Unit_Top.v",
+        "Single_Cycle_Top.v",
+        "Integration_Branch_tb.v"
+      ],
+      "top": "Integration_Branch_tb",
+      "vcd": "integration_branch.vcd",
+      "title": "BEQ Branch and Next-PC Integration"
+    },
+    "11_final_processor": {
+      "sources": [
+        "Mux.v",
+        "PC.v",
+        "PC_Adder.v",
+        "ALU.v",
+        "Register_File.v",
+        "Sign_Extend.v",
+        "Instruction_Memory.v",
+        "Data_Memory.v",
+        "Main_Decoder.v",
+        "ALU_Decoder.v",
+        "Control_Unit_Top.v",
+        "Single_Cycle_Top.v",
+        "Single_Cycle_Top_tb.v"
+      ],
+      "top": "Single_Cycle_Top_tb",
+      "vcd": "single_cycle_top.vcd",
+      "title": "Final RV32I Single-Cycle Processor"
+    }
+  }
+}

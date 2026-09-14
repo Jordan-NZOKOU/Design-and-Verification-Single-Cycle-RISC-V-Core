@@ -1,0 +1,33 @@
+# Copyright 2026 Jordan Nzokou and Doeg Tiozang
+# Project: Nexvantis
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+cycle,pc,inst,asm,regwrite,rd,result,memwrite,addr,write_data,pcsrc
+0,0,5243539,"addi x5, x0, 5",True,5,5,False,,,False
+1,4,4195091,"addi x6, x0, 4",True,6,4,False,,,False
+2,8,6480819,"or x7, x5, x6",True,7,5,False,,,False
+3,12,6485043,"and x8, x5, x6",True,8,4,False,,,False
+4,16,1080198323,"sub x9, x5, x6",True,9,1,False,,,False
+5,20,5449011,"slt x10, x6, x5",True,10,1,False,,,False
+6,24,7348259,"sw x7, 0(x0)",False,,,True,0,5,False
+7,28,9603,"lw x11, 0(x0)",True,11,5,False,0,,False
+8,32,7701603,"beq x11, x7, +8",False,,,False,,,True
+9,40,10782259,"add x12, x9, x10",True,12,2,False,,,False
+10,44,12591651,"sw x12, 4(x0)",False,,,True,4,2,False
+11,48,4293920403,"addi x13, x0, -1",True,13,4294967295,False,,,False
+12,52,436019,"slt x14, x13, x0",True,14,1,False,,,False
+13,56,452531,"or x15, x13, x0",True,15,4294967295,False,,,False
+14,60,99,"beq x0, x0, +0",False,,,False,,,True
+15,60,99,"beq x0, x0, +0",False,,,False,,,True
+16,60,99,"beq x0, x0, +0",False,,,False,,,True
+17,60,99,"beq x0, x0, +0",False,,,False,,,True
