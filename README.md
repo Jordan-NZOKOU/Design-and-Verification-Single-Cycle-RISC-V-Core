@@ -25,7 +25,7 @@
 ![Milestones](https://img.shields.io/badge/milestones-11-6B4EFF.svg)
 ![License](https://img.shields.io/badge/license-Apache--2.0-C76300.svg)
 
-**Nexvantis** is a modular 32-bit RISC-V single-cycle processor project built in
+This repository is a modular 32-bit RISC-V single-cycle processor project built in
 Verilog-2001 and verified through eleven independently executable milestones.
 The repository is organized as a technical portfolio: a reviewer can inspect a
 small block, run its self-checking testbench, follow its integration path, and
