@@ -38,7 +38,7 @@ behavior and verification acceptance criteria while replacing every engineering
 figure with a native Draw.io source and synchronized release exports.
 
 <p align="center">
-  <img src="13_diagrams/svg/01_processor_architecture.svg" alt="Nexvantis single-cycle processor architecture" width="100%">
+  <img src="Diagrams/Complete_RV32I_Architecture_Diagram.png" alt="Nexvantis single-cycle processor architecture" width="100%">
 </p>
 
 ## Project at a glance
@@ -151,10 +151,8 @@ The implementation and tests protect the following contracts:
 | [`10_branch_integration`](10_branch_integration/README.md) | `BEQ` and next-PC integration |
 | [`11_final_processor`](11_final_processor/README.md) | Complete core and architectural regression |
 | [`12_tools`](12_tools/README.md) | Mini-assembler and reproducible program image |
-| [`13_diagrams`](13_diagrams/README.md) | Native Draw.io sources plus synchronized SVG/PNG/PDF engineering figures |
 | [`scripts`](#scripts-and-automation) | Repository checks, simulation runner, reference model, diagram/report support |
 | [`docs`](docs/PORTFOLIO_OVERVIEW.md) | Architecture, verification, decisions, results, review guide, roadmap |
-| [`00_documentation`](00_documentation/REPOSITORY_CONTENTS.md) | English report, Excel ISA workbook, report source, release inventory, and validation records |
 
 Integration milestones intentionally contain local copies of the canonical RTL
 modules. This allows each milestone to compile in isolation. The repository
@@ -363,51 +361,6 @@ stores = 2
 
 See [Expected results](docs/RESULTS.md) and
 [Final processor](11_final_processor/README.md).
-
-## Instruction set architecture workbook
-
-The implemented processor contract is also available as a structured Excel
-workbook:
-
-- [Nexvantis RV32I Instruction Set Architecture - Version 6](00_documentation/Nexvantis_RV32I_Instruction_Set_Architecture_V6.xlsx)
-
-Its six worksheets cover the processor profile, all 12 implemented
-instructions, canonical encodings, immediate formats, control vectors, the
-32-register model, memory assumptions, execution sequencing, scope boundaries,
-and final regression evidence. The workbook is intended as a compact review
-artifact alongside the RTL and report.
-
-## Diagram system
-
-Every engineering figure is maintained as a native, editable Draw.io document:
-
-- `13_diagrams/source/*.drawio` contains one canonical source per figure;
-- `Nexvantis_Diagram_Library.drawio` contains all 23 figures as a multi-page
-  Draw.io library;
-- the processor overview and final datapath use a conventional processor-block
-  architecture style with explicit datapath, control, state, and write-back
-  paths;
-- SVG assets are used by GitHub, vector PDFs are used by the report, and PNGs
-  provide high-resolution previews;
-- every export is produced from the same geometry and validated against the
-  diagram manifest;
-- `make diagrams` rebuilds and validates the complete set.
-
-Open any `.drawio` source in Draw.io Desktop or diagrams.net to inspect or edit
-the native cells, connectors, layers, labels, and page geometry. The complete
-inventory and visual conventions are documented in
-[`13_diagrams/README.md`](13_diagrams/README.md).
-
-## Complete English report
-
-The full report is available at:
-
-- [Nexvantis RV32I Single-Cycle Processor - Version 6 PDF](00_documentation/nexvantis_rv32i_single_cycle_report_V6.pdf)
-- [XeLaTeX source](00_documentation/report_source/nexvantis_rv32i_single_cycle_report.tex)
-
-It covers Verilog foundations, RISC-V concepts, source audit, all eleven
-milestones, complete commented listings, simulation procedures, verification,
-debugging, scripting, synthesis considerations, extension paths, and a glossary.
 
 ## Code-commenting standard
 
